@@ -4,3 +4,4 @@ from week0 import *
 def do_nothing():
 	return 'I did nothing'
 
+x = python_version()
