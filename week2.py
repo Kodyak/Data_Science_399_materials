@@ -1,4 +1,4 @@
-import week1
+from week1 import *
 import re
 
 
