@@ -81,5 +81,29 @@ def count_all_hashes(table):
     return all_hashes
 
 
+### Cosine Similarity
 
+# define dot product
+def dot_product(v1,v2):
+    # check similar type
+    if len(v1) != len(v2):
+        return("vectors are not compatible lengths")
+    else:
+        
+        products = []
+        for i in range(0, len(v1)):
+            products.append(v1[i]*v2[i])
+        dot_product = sum(products)
 
+        return(dot_product)
+
+# compute cosine similarity
+def cosine_similarity(v1,v2):
+    
+    # check similar type
+    if len(v1) != len(v2):
+        return("vectors are not compatible lengths")
+    else:
+
+        # compute similarity
+        return dot_product(v1,v2) / ((dot_product(v1,v1)**.5) * (dot_product(v2,v2)**.5))
